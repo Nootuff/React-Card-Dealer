@@ -1,8 +1,9 @@
-.CardTable{
-  
+.CardTable-Button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
-.CardTable-Button{
-    margin-top: 0;
-    margin-bottom: 20px;
+.CardTable-pile{
+    margin-top: 80px;
 }

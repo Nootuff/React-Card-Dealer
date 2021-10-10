@@ -14,7 +14,7 @@ class CardTable extends React.Component {
     this.draw = this.draw.bind(this);
   }
 
-  componentDidMount() { //When the page loads for the first time this activates.
+  componentDidMount() { //When the page loads for the first time this activates creating a new shuffled deck to draw cards from.
     axios.get("https://deckofcardsapi.com/api/deck/new/shuffle")
       .then((response) => {
         this.setState({ deckId: response.data.deck_id })
@@ -41,7 +41,9 @@ class CardTable extends React.Component {
     return (
       <div className="CardTable">
         {button}
+        <div className="CardTable-pile">
         {cards}
+        </div>
       </div>
     )
   }
