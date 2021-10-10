@@ -31,9 +31,8 @@ class CardTable extends React.Component {
       })
   }
 
-
   render() {
-    const cards = this.state.onTable.map(value => 
+    const cards = this.state.onTable.map(value =>
       <Card key={value.cards[0].code} data={value} />
     )
     var button = (this.state.onTable.length >= 52) ? <p className="CardTable-Button">Thats all</p> : <button className="CardTable-Button" onClick={this.draw}>Deal!</button>; //Ternary operator, when all cards dealt the button vanishes. 
@@ -42,7 +41,7 @@ class CardTable extends React.Component {
       <div className="CardTable">
         {button}
         <div className="CardTable-pile">
-        {cards}
+          {cards}
         </div>
       </div>
     )
